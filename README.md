@@ -53,7 +53,7 @@ Note that each weekly challenge can contain multiple files. All of these files w
 
 For example, the code above is a dataset of [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and contains three files. It is advisable to read the challenge descriptions to get more information on how the files are linked.
 
-**NOTE**: Some challenges might fail to load due to certain data formatting issues. In this case, please visit the repository directly and deal with the files on a case-by-case basis.
+**NOTE**: Data for some weeks might fail to load due to data structure or formatting issues. In this case, please visit the repository directly and deal with the files directly.
 
 
 
