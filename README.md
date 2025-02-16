@@ -25,17 +25,20 @@ Load meta data for a certain year:
 tidytuesday, year(2024)
 ```
 
-The meta list will give a `load` option for each week. Additional links are also provided to take users directly to the repository or other data sources.
+The meta list also provides a `[Load]` link next to each date for fetching the data. Additional links are also provided to take users directly to the repository or other data sources.
 
-Otherwise a specific week can be downloaded directly by specifying:
+Otherwise a specific week can be downloaded directly as follows:
 
 ```stata
-tidytuesday get, year(2025) week(3)
+tidytuesday get, year(2023) week(48)
 ```
 
 Note that each weekly challenge can contain multiple files. All of these files will be downloaded separately. Please set the path before downloading the files.
 
-Some challenges might fail to load due to certain data formatting issues. In this case, please visit the repository directly and deal with the files on a case-by-case basis.
+
+For example, the code above is a dataset of [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and contains three files. It is advisable to read the challenge descriptions to get more information on how the files are linked.
+
+**NOTE**: Some challenges might fail to load due to certain data formatting issues. In this case, please visit the repository directly and deal with the files on a case-by-case basis.
 
 
 
