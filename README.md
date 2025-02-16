@@ -10,7 +10,7 @@
 # tidytuesday v1.0 (beta)
 *(16 Feb 2025)*
 
-A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) challenge. Please also visit this link for TidyTuesday's citation guidelines and license information.
+A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) repository. Please also visit this link for TidyTuesday's citation guidelines and license information.
 
 The main purpose of this package is to give quick access to data for visualizations.
 
