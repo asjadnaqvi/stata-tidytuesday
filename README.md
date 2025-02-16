@@ -17,9 +17,24 @@ The main purpose of this package is to give quick access to data for visualizati
 **NOTE**: A helpfile currently does not exist but the use is fairly straightforward. See below.
 
 
+## Installation
+
+The package can be installed via SSC or GitHub. The GitHub version, *might* be more recent due to bug fixes, feature updates etc, and *may* contain syntax improvements and changes in *default* values. See version numbers below. Eventually the GitHub version is published on SSC.
+
+
+SSC (**xxx**):
+
+```stata
+COMING SOON!
+```
+
+```stata
+net install tidytuesday, from("https://raw.githubusercontent.com/asjadnaqvi/stata-tidytuesday/main/installation/") replace
+```
+
 ## Examples
 
-Load meta data for a certain year:
+Load the meta data for a certain year:
 
 ```stata
 tidytuesday, year(2024)
