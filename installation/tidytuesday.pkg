@@ -1,0 +1,22 @@
+v 1.0
+d {bf:TIDYTUESDAY}: A Stata package for fetching TidyTuesday meta data and files.
+d See {bf:help tidytuesday} after installation.
+d
+d Requires: Stata version 15 or higher.
+d
+d KW: Stata
+d KW: graphs
+d KW: tidytuesday
+d KW: data science
+d
+d
+d Distribution-Date: 20250216
+d
+d This  version: 16 Feb 2025
+d First version: 16 Feb 2025
+d License: MIT
+d
+d Author: Asjad Naqvi (asjadnaqvi@gmail.com)
+d
+f tidytuesday.ado
+
