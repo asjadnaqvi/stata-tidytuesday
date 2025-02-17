@@ -16,6 +16,8 @@ The main purpose of this package is to give quick access to interesting datasets
 
 :triangular_flag_on_post: The package is still beta and may contains bugs or the full scope of error checks.
 
+:triangular_flag_on_post: The package requires internet since it is actively parsing stable GitHub links for information. Links and paths can also break so please report them.
+
 :triangular_flag_on_post: The package requires newer Stata versions (v17+ recommended) due to newer features in default functions.
 
 :triangular_flag_on_post: A helpfile currently does not exist but the use is fairly straightforward. See below.
@@ -58,7 +60,7 @@ Data for a specific week can be downloaded as follows:
 tidytuesday get, year(2023) week(48)
 ```
 
-Note that each weekly challenge can contain multiple files. All of these files will be downloaded and saved separately. For example, the code above is a dataset of [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and contains three files. These are downloaded and cleaned in the backend including variable name etc. It is advisable to read the challenge descriptions to get more information on how the files are linked. Please note that data for some files might need further cleaning, e.g. converting string to numeric variables or formatting date.
+Note that each weekly challenge can contain multiple files. All of these files will be downloaded and saved separately. For example, the code above is for [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and contains three files. These are downloaded, parsed, cleaned, and saved separately in the backend. It is advisable to read the challenge descriptions to get more information on how the files are linked, unique identifiers etc. Note that data for some files might need further cleaning, e.g. converting string to numeric variables or formatting dates, etc.
 
 Please also remember to set a directory path before downloading the files.
 
