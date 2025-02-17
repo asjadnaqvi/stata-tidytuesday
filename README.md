@@ -16,7 +16,7 @@ The main purpose of this package is to give quick access to interesting datasets
 
 :triangular_flag_on_post: The package is still beta and may contains bugs or the full scope of error checks.
 
-:triangular_flag_on_post: The package requires newer Stata versions due to newer features in default Stata functions (v17+ recommended).
+:triangular_flag_on_post: The package requires newer Stata versions (v17+ recommended) due to newer features in default functions.
 
 :triangular_flag_on_post: A helpfile currently does not exist but the use is fairly straightforward. See below.
 
