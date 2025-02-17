@@ -14,11 +14,11 @@ A Stata package for fetching meta information and files from the R [TidyTuesday]
 
 The main purpose of this package is to give quick access to interesting datasets for visualizations in Stata.
 
-The package is still beta and may contains bugs or the full scope of error checks.
+:triangular_flag_on_post: The package is still beta and may contains bugs or the full scope of error checks.
 
-**NOTE**: The package requires newer Stata versions due to newer features in default Stata functions (v17+ recommended).
+:triangular_flag_on_post: The package requires newer Stata versions due to newer features in default Stata functions (v17+ recommended).
 
-**NOTE**: A helpfile currently does not exist but the use is fairly straightforward. See below.
+:triangular_flag_on_post: A helpfile currently does not exist but the use is fairly straightforward. See below.
 
 
 
@@ -62,7 +62,7 @@ Note that each weekly challenge can contain multiple files. All of these files w
 
 Please also remember to set a directory path before downloading the files.
 
-**NOTE**: Data for some weeks might fail to load due to incompatible data structure or other data formatting issues. In this case, please visit the repository and deal with the files directly.
+:triangular_flag_on_post: Data for some weeks might fail to load due to incompatible data structure or other data formatting issues. In this case, please visit the repository and deal with the files directly.
 
 
 
