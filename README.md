@@ -1,5 +1,5 @@
 
-![StataMin](https://img.shields.io/badge/stata-2011-blue) ![issues](https://img.shields.io/github/issues/asjadnaqvi/stata-tidytuesday) ![license](https://img.shields.io/github/license/asjadnaqvi/stata-tidytuesday) ![Stars](https://img.shields.io/github/stars/asjadnaqvi/stata-tidytuesday) ![version](https://img.shields.io/github/v/release/asjadnaqvi/stata-tidytuesday) ![release](https://img.shields.io/github/release-date/asjadnaqvi/stata-tidytuesday)
+![StataMin](https://img.shields.io/badge/stata-2018-blue) ![issues](https://img.shields.io/github/issues/asjadnaqvi/stata-tidytuesday) ![license](https://img.shields.io/github/license/asjadnaqvi/stata-tidytuesday) ![Stars](https://img.shields.io/github/stars/asjadnaqvi/stata-tidytuesday) ![version](https://img.shields.io/github/v/release/asjadnaqvi/stata-tidytuesday) ![release](https://img.shields.io/github/release-date/asjadnaqvi/stata-tidytuesday)
 
 [Installation](#Installation) | [Examples](#Examples) | [Feedback](#Feedback) | [Change log](#Change-log)
 
@@ -16,7 +16,10 @@ The main purpose of this package is to give quick access to interesting datasets
 
 The package is still beta and may contains bugs or the full scope of error checks.
 
-**NOTE**: A helpfile currently does not exist, but the use is fairly straightforward (see below).
+**NOTE**: The package requires newer Stata versions due to newer features in default Stata functions (v17+ recommended).
+
+**NOTE**: A helpfile currently does not exist but the use is fairly straightforward. See below.
+
 
 
 ## Installation
@@ -41,6 +44,11 @@ Load the meta data for a certain year:
 ```stata
 tidytuesday, year(2024)
 ```
+
+which will display an output like this:
+
+![image](https://github.com/user-attachments/assets/bf0ce5c1-f0cd-410a-a5b3-0a33ef7c454f)
+
 
 The meta list provides a data `[Load]` link next to each week's date. Additional links are also provided to take users directly to the TidyTuesday repository and other data sources.
 
