@@ -40,20 +40,19 @@ Load the meta data for a certain year:
 tidytuesday, year(2024)
 ```
 
-The meta list also provides a `[Load]` link next to each date for fetching the data. Additional links are also provided to take users directly to the repository or other data sources.
+The meta list provides a data `[Load]` link next to each week's date. Additional links are also provided to take users directly to the TidyTuesday repository and other data sources.
 
-Otherwise a specific week can be downloaded directly as follows:
+Data for a specific week can be downloaded as follows:
 
 ```stata
 tidytuesday get, year(2023) week(48)
 ```
 
-Note that each weekly challenge can contain multiple files. All of these files will be downloaded separately. Please set the path before downloading the files.
+Note that each weekly challenge can contain multiple files. All of these files will be downloaded and saved separately. For example, the code above is a dataset of [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and contains three files. These are downloaded and cleaned in the backend including variable name etc. It is advisable to read the challenge descriptions to get more information on how the files are linked. Please note that data for some files might need further cleaning, e.g. converting string to numeric variables or formatting date.
 
+Please also remember to set a directory path before downloading the files.
 
-For example, the code above is a dataset of [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and contains three files. It is advisable to read the challenge descriptions to get more information on how the files are linked.
-
-**NOTE**: Data for some weeks might fail to load due to data structure or formatting issues. In this case, please visit the repository directly and deal with the files directly.
+**NOTE**: Data for some weeks might fail to load due to incompatible data structure or other data formatting issues. In this case, please visit the repository and deal with the files directly.
 
 
 
