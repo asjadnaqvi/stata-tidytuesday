@@ -11,7 +11,7 @@
 *capture program drop tidytuesday 
 
 program define tidytuesday
-version 15
+version 17
 
 syntax [anything], [ list year(numlist max=1 >=2018 <=2025) week(numlist max=1 >=1 <=52) month(numlist max=1 >=1 <=52) recent ]  
 
