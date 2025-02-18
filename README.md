@@ -12,7 +12,7 @@
 # tidytuesday v1.0 (beta)
 *(16 Feb 2025)*
 
-A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) repository (also see for citation guidelines and license information).
+A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) repository (see also for citation guidelines and license information).
 
 The main purpose of this package is to give quick access to interesting datasets for visualizations in Stata.
 
@@ -62,7 +62,7 @@ Data for a specific week can be downloaded as follows:
 tidytuesday get, year(2023) week(48)
 ```
 
-Note that each weekly challenge can contain multiple files. All of these files will be downloaded and saved separately. For example, the code above is for [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and contains three files. These are downloaded, parsed, cleaned, and saved separately in the backend. It is advisable to read the challenge descriptions to get more information on how the files are linked, unique identifiers etc. Note that data for some files might need further cleaning, e.g. converting string to numeric variables or formatting dates, etc.
+Note that each weekly challenge can contain multiple files. All of these files will be downloaded. For example, the code above is for [Dr. Who](https://github.com/rfordatascience/tidytuesday/tree/main/data/2023/2023-11-28) episodes and fetches three files. These are downloaded, parsed, cleaned, and saved separately in the backend. It is advisable to read the challenge descriptions to get more information on how the files are linked, what the unique identifiers are, etc. Note that data for some files might need further cleaning, e.g. converting string to numeric variables or formatting dates, etc.
 
 Please also remember to set a directory path before downloading the files.
 
