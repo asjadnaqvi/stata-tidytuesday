@@ -31,11 +31,13 @@ The main purpose of this package is to give quick access to interesting datasets
 The package can be installed via SSC or GitHub. The GitHub version, *might* be more recent due to bug fixes, feature updates etc, and *may* contain syntax improvements and changes in *default* values. See version numbers below. Eventually the GitHub version is published on SSC.
 
 
-SSC (**xxx**):
+SSC (**v1.0**):
 
 ```stata
-COMING SOON!
+ssc install tidytuesday, replace
 ```
+
+Or it can be installed from GitHub (**v1.0**):
 
 ```stata
 net install tidytuesday, from("https://raw.githubusercontent.com/asjadnaqvi/stata-tidytuesday/main/installation/") replace
