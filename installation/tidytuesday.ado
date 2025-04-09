@@ -1,6 +1,8 @@
-*! tidytuesday v1.0 (16 Feb 2025)
+*! tidytuesday v1.1 (10 Apr 2025)
 *! Asjad Naqvi
 
+
+* v1.1 (10 Apr 2025): Fixes to md parsing.
 * v1.0 (16 Feb 2025): First release (beta)
 
 
@@ -13,7 +15,7 @@
 program define tidytuesday
 version 17
 
-syntax [anything], [ list year(numlist max=1 >=2018 <=2025) week(numlist max=1 >=1 <=52) month(numlist max=1 >=1 <=52) recent ]  
+syntax [anything], [ year(numlist max=1 >=2018 <=2025) week(numlist max=1 >=1 <=52) month(numlist max=1 >=1 <=52) ]  
 
 	if "`anything'"=="" local anything meta
 
@@ -40,7 +42,7 @@ quietly {
 
 		drop _id _temp
 
-		drop if regexm(v2, ":---:")==1
+		drop if regexm(v2, "---")==1
 
 
 		foreach x of varlist _all {
@@ -54,7 +56,7 @@ quietly {
 		drop if week==.
 
 		replace date = subinstr(date, "`", "", .)
-		gen date2 = date(date, "YMD")
+		generate date2 = date(date, "YMD")
 		format date2 %td
 
 		rename date date_str
@@ -84,7 +86,7 @@ quietly {
 		replace data2 = subinstr(data2, "/readme.md", "", .)
 		replace data2 = `"""' +  data2 + `"""'
 
-		gen data_len = length(data1)
+		generate data_len = length(data1)
 		summ data_len, meanonly
 
 		local max = max(r(max), 50)
@@ -93,8 +95,8 @@ quietly {
 		replace data1 = data1 + substr("`pad'", 1, `max' - data_len)
 
 
-		cap drop info
-		gen info = "{browse "  + data2  +  ":" + data1 + "}" if data!=""
+		capture drop info
+		generate info = "{browse "  + data2  +  ":" + data1 + "}" if data!=""
 
 		drop data data1 data2 data_len
 
@@ -156,7 +158,7 @@ quietly {
 		replace article = "{browse "  + article2  +  ":" + article1 + "}"  if article!=""
 		replace article = article1 if article_len==0
 
-		gen year = `year'
+		generate year = `year'
 		
 		tempfile _ttlist
 		
