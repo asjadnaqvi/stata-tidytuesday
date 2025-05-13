@@ -1,4 +1,4 @@
-v 1.1
+v 1.2
 d {bf:TIDYTUESDAY}: A Stata package for fetching TidyTuesday meta data and files.
 d See {bf:help tidytuesday} after installation.
 d
@@ -10,9 +10,9 @@ d KW: tidytuesday
 d KW: data science
 d
 d
-d Distribution-Date: 20250410
+d Distribution-Date: 20250513
 d
-d This  version: 10 Apr 2025
+d This  version: 13 May 2025
 d First version: 16 Feb 2025
 d License: MIT
 d

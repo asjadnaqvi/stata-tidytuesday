@@ -9,8 +9,8 @@
 
 
 
-# tidytuesday v1.1 (beta)
-*(10 Apr 2025)*
+# tidytuesday v1.2 (beta)
+*(13 May 2025)*
 
 A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) repository (see also for citation guidelines and license information).
 
@@ -37,7 +37,7 @@ SSC (**v1.0**):
 ssc install tidytuesday, replace
 ```
 
-Or it can be installed from GitHub (**v1.1**):
+Or it can be installed from GitHub (**v1.2**):
 
 ```stata
 net install tidytuesday, from("https://raw.githubusercontent.com/asjadnaqvi/stata-tidytuesday/main/installation/") replace
@@ -78,6 +78,9 @@ Please open an [issue](https://github.com/asjadnaqvi/stata-tidytuesday/issues) t
 
 
 ## Change log
+
+**v1.2 (13 May 2025)**
+- Markdown parsing is now mostly through regular expressions to better handle changes to markdown files.
 
 **v1.1 (10 Apr 2025)**
 - Fixes to markdown parsing.
