@@ -14,15 +14,9 @@
 
 A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) repository (see also for citation guidelines and license information).
 
-The main purpose of this package is to give quick access to interesting datasets for visualizations in Stata.
-
-:triangular_flag_on_post: The package is still beta and may contains bugs or the full scope of error checks.
+The main purpose of this package is to give quick access to interesting datasets for visualizations from the #TidyTuesday challenge in Stata.
 
 :triangular_flag_on_post: The package requires internet since it is actively parsing stable GitHub links for information. Links and paths can also break so please report them.
-
-:triangular_flag_on_post: The package requires newer Stata versions (v17+ recommended) due to newer features in default functions.
-
-:triangular_flag_on_post: A helpfile currently does not exist but the use is fairly straightforward. See below.
 
 
 
