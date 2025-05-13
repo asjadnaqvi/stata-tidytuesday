@@ -9,7 +9,7 @@
 
 
 
-# tidytuesday v1.2 (beta)
+# tidytuesday v1.2
 *(13 May 2025)*
 
 A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) repository (see also for citation guidelines and license information).
