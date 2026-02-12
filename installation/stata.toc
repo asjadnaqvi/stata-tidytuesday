@@ -1,8 +1,8 @@
-v 1.2
+v 1.3
 d 'TIDYTUESDAY': A Stata package for fetching TidyTuesday data
 d Asjad Naqvi
 d asjadnaqvi@gmail.com
-d Distribution-Date: 20250513
+d Distribution-Date: 20260212
 d https://medium.com/the-stata-guide
 p tidytuesday
 

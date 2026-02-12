@@ -1,7 +1,7 @@
-*! tidytuesday v1.2 (13 May 2025)
+*! tidytuesday v1.3 (12 Feb 2026)
 *! Asjad Naqvi (asjadnaqvi@gmail.com)
 
-
+* v1.3 (11 Feb 2026): If year() is not specified then pick the current year. bug fixes
 * v1.2 (13 May 2025): Moved internal calls to regular expressions
 * v1.1 (10 Apr 2025): Fixes to md parsing.
 * v1.0 (16 Feb 2025): First release (beta)
@@ -13,22 +13,34 @@
 
 *capture program drop tidytuesday 
 
-program define tidytuesday
+program define tidytuesday, rclass
 version 17
 
-syntax [anything], [ year(numlist max=1 >=2018 <=2025) week(numlist max=1 >=1 <=52) month(numlist max=1 >=1 <=52) ]  
+syntax [ anything ], [ year(numlist max=1 >=2018) week(numlist max=1 >=1 <=52) month(numlist max=1 >=1 <=52) ]  
 
+
+	
 	if "`anything'"=="" local anything meta
 
-	if !inlist("`anything'", "meta", "get", "") {
-		di as error "Valid options are tidytuesday meta, [options], or tidytuesday get, [options]"
+	if !inlist("`anything'", "meta", "get", "", "version") {
+		di as error "Valid options are tidytuesday meta, tidytuesday get, tidytuesday version, or leave blank."
 		exit
 	}
+	
+	
+	return local date 		20260212
+	return local version 	1.3
 
+	if "`anything'"=="version" {
+		noi _myreturn
+		noisily display in green "{bf:tidytuesday} v1.3 (2026-02-12)"
+	}
 
 quietly {
 	preserve
-		if "`year'" =="" local year 2025
+	
+		local _year = substr("$S_DATE", -4, 4)
+		if "`year'" =="" local year `_year'
 
 		import delim using "https://raw.githubusercontent.com/rfordatascience/tidytuesday/refs/heads/main/data/`year'/readme.md", delim("|") clear
 
@@ -193,6 +205,9 @@ quietly {
 			_tidyget, year(`year') week(`week') fetch(`mydate')
 			
 		}
+		
+		
+
 	
 end
 
@@ -316,9 +331,17 @@ end
 		restore 
 	}
 
+	end	
+
+	program define _myreturn
+		noisily return list
+		noisily display "`r(version)'"
+	end
+	
+	
 	*/
 			
-end
+*end
 	
 
 *************************

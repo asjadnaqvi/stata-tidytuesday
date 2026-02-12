@@ -1,7 +1,7 @@
 {smcl}
-{* 13May2025}{...}
+{* 12Feb2026}{...}
 {hi:help treecluster}{...}
-{right:{browse "https://github.com/asjadnaqvi/stata-tidytuesday":tidytuesday v1.2 (GitHub)}}
+{right:{browse "https://github.com/asjadnaqvi/stata-tidytuesday":tidytuesday v1.3 (GitHub)}}
 
 {hline}
 
@@ -54,8 +54,8 @@ Please submit bugs, errors, feature requests on {browse "https://github.com/asja
 
 {title:Package details}
 
-Version      : {bf:tidytuesday} v1.2
-This release : 13 May 2025
+Version      : {bf:tidytuesday} v1.3
+This release : 12 Feb 2026
 First release: 16 Feb 2025
 Repository   : {browse "https://github.com/asjadnaqvi/stata-tidytuesday":GitHub}
 Keywords     : Stata, data, tidytuesday

@@ -9,8 +9,8 @@
 
 
 
-# tidytuesday v1.2
-*(13 May 2025)*
+# tidytuesday v1.3
+*(12 Feb 2026)*
 
 A Stata package for fetching meta information and files from the R [TidyTuesday](https://github.com/rfordatascience/tidytuesday) repository (see also for citation guidelines and license information).
 
@@ -31,13 +31,20 @@ SSC (**v1.2**):
 ssc install tidytuesday, replace
 ```
 
-Or it can be installed from GitHub (**v1.2**):
+Or it can be installed from GitHub (**v1.3**):
 
 ```stata
 net install tidytuesday, from("https://raw.githubusercontent.com/asjadnaqvi/stata-tidytuesday/main/installation/") replace
 ```
 
 ## Examples
+
+Load the meta data for the current year:
+
+```stata
+tidytuesday
+```
+
 
 Load the meta data for a certain year:
 
@@ -72,6 +79,10 @@ Please open an [issue](https://github.com/asjadnaqvi/stata-tidytuesday/issues) t
 
 
 ## Change log
+
+**v1.3 (12 Feb 2026)**
+- Current year is auto-picked if just `tidytuesday` is typed.
+- Bug fixes.
 
 **v1.2 (13 May 2025)**
 - Markdown parsing is now mostly through regular expressions to better handle changes to markdown files.
