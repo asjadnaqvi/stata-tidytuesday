@@ -1,10 +1,11 @@
-*! tidytuesday v1.3 (12 Feb 2026)
+*! tidytuesday v1.31 (01 Apr 2026)
 *! Asjad Naqvi (asjadnaqvi@gmail.com)
 
-* v1.3 (11 Feb 2026): If year() is not specified then pick the current year. bug fixes
-* v1.2 (13 May 2025): Moved internal calls to regular expressions
-* v1.1 (10 Apr 2025): Fixes to md parsing.
-* v1.0 (16 Feb 2025): First release (beta)
+* v1.31 (01 Apr 2026): Minor bugs fixes.
+* v1.3  (11 Feb 2026): If year() is not specified then pick the current year. bug fixes
+* v1.2  (13 May 2025): Moved internal calls to regular expressions
+* v1.1  (10 Apr 2025): Fixes to md parsing.
+* v1.0  (16 Feb 2025): First release (beta)
 
 
 
@@ -14,7 +15,7 @@
 *capture program drop tidytuesday 
 
 program define tidytuesday, rclass
-version 17
+version 17		// Version 17 due to newer import delim options.
 
 syntax [ anything ], [ year(numlist max=1 >=2018) week(numlist max=1 >=1 <=52) month(numlist max=1 >=1 <=52) ]  
 
@@ -28,13 +29,13 @@ syntax [ anything ], [ year(numlist max=1 >=2018) week(numlist max=1 >=1 <=52) m
 	}
 	
 	
-	return local date 		20260212
-	return local version 	1.3
+	*return local date 		20260212
+	*return local version 	1.3
 
-	if "`anything'"=="version" {
-		noi _myreturn
-		noisily display in green "{bf:tidytuesday} v1.3 (2026-02-12)"
-	}
+	*if "`anything'"=="version" {
+	*	noi _myreturn
+	*	noisily display in green "{bf:tidytuesday} v1.3 (2026-02-12)"
+	*}
 
 quietly {
 	preserve
@@ -241,13 +242,13 @@ end
 ******************
 
 	program define _tidyget
-		syntax, year(numlist max=1 >=2018 <=2025) week(numlist max=1 >=1 <=52) fetch(string)
+		syntax, year(numlist max=1 >=2018) week(numlist max=1 >=1 <=52) fetch(string)
 	
 		
 	quietly {
 
 		preserve
-			import delim using "https://raw.githubusercontent.com/rfordatascience/tidytuesday/refs/heads/main/data/`year'/`fetch'/readme.md", clear groupseparator("|")  stripquotes(yes)
+			import delim using "https://raw.githubusercontent.com/rfordatascience/tidytuesday/refs/heads/main/data/`year'/`fetch'/readme.md", clear groupseparator("|")  stripquotes(yes) // encoding(utf8)
 
 			gen markme=.
 
@@ -295,11 +296,13 @@ end
 			
 			replace type = "string" if type=="character"
 			drop type
+			
+			*noi list
 
 			tempfile _tidyget
 			save `_tidyget', replace
 			
-			noisily levelsof filename, local(lvls) clean
+			levelsof filename, local(lvls) clean
 		restore
 		
 		preserve
@@ -307,8 +310,8 @@ end
 
 				use `_tidyget', clear
 				
-				levelsof variable if filename=="`x'", local(vars) clean
-				levelsof label    if filename=="`x'", local(labs) clean
+				levelsof variable if filename=="`x'", local(vars) 
+				levelsof label    if filename=="`x'", local(labs) 
 				
 				local length : word count `vars'
 				
@@ -324,19 +327,21 @@ end
 				local filename = subinstr("`x'", ".csv", "", .)
 				save `filename'.dta, replace
 				count
-
-				noisily di in green "File {ul:`filename'.dta} saved (`length' variables, `r(N)' observations)" in smcl "{stata use `filename'.dta, clear: [USE]}"
+				
+				
+				noisily di in yellow "File {ul:`filename'.dta} saved (`length' variables, `r(N)' observations)" in smcl "{stata use `filename'.dta, clear: [Load]}"
 
 			}
 		restore 
 	}
 
 	end	
-
-	program define _myreturn
-		noisily return list
-		noisily display "`r(version)'"
-	end
+	
+	
+	*program define _myreturn
+	*	noisily return list
+	*	noisily display "`r(version)'"
+	*end
 	
 	
 	*/

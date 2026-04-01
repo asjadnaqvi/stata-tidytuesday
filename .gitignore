@@ -1,0 +1,18 @@
+# Ignore everything by default
+*
+*.stswp
+
+# Keep this file tracked
+!.gitignore
+
+# Keep required metadata files
+!README.md
+!LICENSE
+!CITATION.cff
+
+# Keep installation folder and all its contents
+!installation/
+!installation/**
+
+# But still ignore Stata swap files within installation
+installation/**/*.stswp
